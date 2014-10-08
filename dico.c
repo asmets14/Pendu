@@ -8,6 +8,8 @@ char *dico()
 	int position = 0;
 	char *chaine;
 	
+	chaine = malloc(100);
+	
 	fichier = fopen("dico.txt", "r");
 
 	if (fichier != NULL)
