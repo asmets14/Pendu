@@ -1,13 +1,14 @@
 #include"Pendu.h"
 
-char dico(char *chaine)
+char *dico()
 {
 	FILE* fichier = NULL;
 	int nbrLigne = 0;
 	int nbr = 0;
 	int position = 0;
+	char chaine[100];
+	char espoir[100];
 	
-
 	fichier = fopen("dico.txt", "r");
 
 	if (fichier != NULL)
@@ -18,19 +19,20 @@ char dico(char *chaine)
        		}
 		nbrLigne--;
 	 }
+
 srand(time(NULL));
-nbr = (rand() % (nbrLigne - 0 + 1)); //generation nbr aleatoire
+nbr = (rand() % (nbrLigne + 1)); //generation nbr aleatoire
 nbrLigne = 0;
-nbr = nbr - 1;
 fseek(fichier, 0, SEEK_SET);
 while(nbrLigne != nbr)
-{
-	fgets(chaine, TAILLE_MAX, fichier);
-	nbrLigne++;
-}
+	{
+		fgets(chaine, TAILLE_MAX, fichier);
+		nbrLigne++;
+	}
 position = ftell(fichier);
 fgets(chaine, TAILLE_MAX, fichier);
 fclose(fichier);
-  
-    return *chaine;
+strncpy(espoir, chaine, strlen(chaine) - 1);
+printf("|%s|", espoir);
+    return (char *)espoir;
 } 

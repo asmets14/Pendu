@@ -3,19 +3,14 @@
 void ft_strlen(char *str)
 {
 	int i = 0;
-	
+	printf("a partir du compte %s", str);
 	while(str[i])
 	{	
-		i++;	
-	}
-	i--;
-	printf("mot secret :");
-	while(i >= 0)
-	{
 		str[i] = '*';
-		i--;
-	}	
-	str[i]= '\0';
+		i++;
+	}
+	printf("STR %d\n", i);
+	printf("mot secret : %s\n", str);
 }
 
 

@@ -3,16 +3,18 @@
 
 int main()
 {
-	char *motSecret;
+	char motSecret[100];
 	char copie [100];
 	int maLettre;
 	int vie = 10;
 
 	printf("== Bienvenue au jeu du Pendu ==\n\n");
-	*motSecret = dico;
+	strcpy(motSecret, dico());
 	strcpy(copie, motSecret);
+	printf("MAIN COPIE; %s", copie);
+	printf("MAIN motSecret; %s", motSecret);
 	ft_strlen(copie);// transformation de copie avec *
-	printf(" %s\n\n", copie);
+	printf(" %s\npremiere copie\n", copie);
 	
 
 do
@@ -26,7 +28,8 @@ do
 	if(strcmp(copie, motSecret)!= 0 )
 		printf("\nIl vous reste %d vie\n", vie);
 	
-}while(strcmp(copie, motSecret)!= 0 );
+}
+while(strcmp(copie, motSecret)!= 0 );
 	
 	if(vie != 0)
 		printf("\n\n--- Felicitation, le mot secret etait : %s ---\n", motSecret);

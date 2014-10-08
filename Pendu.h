@@ -8,11 +8,14 @@
 #include<ctype.h>
 #include<string.h>
 #include<time.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
 
 void ft_strlen		(char *motSecret);
 char lireCaractere	();
 void comparaison	(char caracetre, char *motSecret, char *copie);
 int  life		(int caractere, char *motSecret, int vie);
-char dico		(char *chaine);
+char *dico		();
 
 #endif
