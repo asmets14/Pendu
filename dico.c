@@ -6,8 +6,7 @@ char *dico()
 	int nbrLigne = 0;
 	int nbr = 0;
 	int position = 0;
-	char chaine[100];
-	char espoir[100];
+	char *chaine;
 	
 	fichier = fopen("dico.txt", "r");
 
@@ -32,7 +31,5 @@ while(nbrLigne != nbr)
 position = ftell(fichier);
 fgets(chaine, TAILLE_MAX, fichier);
 fclose(fichier);
-strncpy(espoir, chaine, strlen(chaine) - 1);
-printf("|%s|", espoir);
-    return (char *)espoir;
+    return chaine;
 } 

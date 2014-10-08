@@ -28,15 +28,12 @@ do
 	if(strcmp(copie, motSecret)!= 0 )
 		printf("\nIl vous reste %d vie\n", vie);
 	
-}
-while(strcmp(copie, motSecret)!= 0 );
+}while(strcmp(copie, motSecret)!= 0 );
 	
 	if(vie != 0)
 		printf("\n\n--- Felicitation, le mot secret etait : %s ---\n", motSecret);
 	else
-		printf("\n\nT'es mort Mouhahahahahaha le mot etait : %s\n", motSecret);
+		printf("\n\nT'es mort Mouhahahahahaha le mot etait : %s\n", motSecret);	
 	printf("\nMerci d'avoir joue!\n");
-
-	return(0);
-		
+	return(0);		
 }
