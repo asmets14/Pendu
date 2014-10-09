@@ -3,7 +3,8 @@
 void comparaison(char caractere, char *motSecret, char *copie)
 {
 	int i = 0;
-	
+
+	printf("\n\t");
 	while(motSecret[i])
 	{
 		

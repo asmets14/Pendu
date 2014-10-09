@@ -2,6 +2,7 @@
 
 #define PENDU
 #define TAILLE_MAX 1000
+#define COULEUR(param) printf("\033[%sm", param)
 
 #include<stdio.h>
 #include<stdlib.h>
